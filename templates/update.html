@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>添加职工</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="/static/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="/static/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/static/assets/css/admin.css">
+    <link rel="stylesheet" href="/static/assets/css/app.css">
+</head>
+<body data-type="generalComponents">
+ <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:" class="tpl-logo">
+                <img src="/static/assets/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+        </div>
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+            </ul>
+        </div>
+    </header>
+    <h4 align="center">添加职工</h4>
+        <div align="center">
+    			<form role="form" action="/save" method="post">
+                    <input type="hidden"class="form-control" name="idd">
+				<div class="form-group">
+					  <label style="display: inline-block;width: 300px">id： </label><label><input type="text" class="form-control" style="width: 200px" name="id"/></label>
+				</div>
+                <div class="form-group">
+					 <label style="display: inline-block;width: 300px">工号： </label><label><input type="text" class="form-control" style="width: 200px" name="a"  /></label>
+				</div>
+                <div class="form-group">
+					 <label style="display: inline-block;width: 300px">姓名： </label><label><input type="text" class="form-control" style="width: 200px" name="b"/></label>
+				</div>
+                    <div class="form-group">
+					 <label style="display: inline-block;width: 300px">民族： </label><label><input type="text" class="form-control" style="width: 200px" name="c"/></label>
+				</div>
+                    <div class="form-group">
+					 <label style="display: inline-block;width: 300px">生日： </label><label><input type="text" class="form-control" style="width: 200px" name="d"/></label>
+				</div>
+                    <div class="form-group">
+					 <label style="display: inline-block;width: 300px">年龄： </label><label><input type="text" class="form-control" style="width: 200px" name="e"/></label>
+				</div>
+                    <div class="form-group">
+                 <label style="display: inline-block;width: 300px">文化程度： </label><label><input type="text" class="form-control" style="width: 200px" name="f"/></label>
+				</div>
+                    <div class="form-group">
+		  		     <label style="display: inline-block;width: 300px">籍贯： </label><label><input type="text" class="form-control" style="width: 200px" name="g"/></label>
+				</div>
+                    <div class="form-group">
+			     <label style="display: inline-block;width: 300px">身份证号： </label><label><input type="text" class="form-control" style="width: 200px" name="h"/></label>
+				</div>
+                    <div class="form-group">
+			  	     <label style="display: inline-block;width: 300px">性别： </label><label><input type="text" class="form-control" style="width: 200px" name="i"/></label>
+				</div>
+                    <div class="form-group">
+			 	    <label style="display: inline-block;width: 300px">职位：  </label><label><input type="text" class="form-control" style="width: 200px" name="k"/></label>
+				</div>
+                    <div class="form-group">
+				  <label style="display: inline-block;width: 300px">手机号：  </label><label><input type="text" class="form-control" style="width: 200px" name="l"/></label>
+				</div>
+<div class="am-u-sm-2 login-am-center">
+				 <button type="submit" style="width: 180px" class="am-btn am-btn-default">保存</button></div>
+			</form>
+        </div>
+
+</body>
+</html>

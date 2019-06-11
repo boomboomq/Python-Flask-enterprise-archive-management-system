@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>档案管理系统</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="/static/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="/static/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/static/assets/css/admin.css">
+    <link rel="stylesheet" href="/static/assets/css/app.css">
+</head>
+
+<body data-type="generalComponents">
+
+
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:" class="tpl-logo">
+                <img src="/static/assets/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+
+
+            </ul>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+
+
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title">
+                功能列表
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="/supervisor_index" class="nav-link active">
+                            <i class="am-icon-home"></i>
+                            <span>系统首页</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="/suparc" class="nav-link">
+                            <i class="am-icon-bar-chart"></i>
+                            <span>职工信息</span>
+                        </a>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="/empower" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-bar-chart"></i>
+                            <span>职位</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="/powerman" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-bar-chart"></i>
+                            <span>管理人员</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="/update" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-bar-chart"></i>
+                            <span>添加信息</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="/edit" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-bar-chart"></i>
+                            <span>修改信息</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="/gongzi" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-bar-chart"></i>
+                            <span>工资信息</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="/tupian" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-bar-chart"></i>
+                            <span>合同信息</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="tpl-content-wrapper">
+
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span>
+                    </div>
+                    <div class="tpl-portlet-input tpl-fz-ml">
+                        <div class="portlet-input input-small input-inline">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tpl-block">
+                    <div class="am-g">
+                        <div class="am-u-sm-12">
+
+
+                            <form class="am-form"  method="post">
+                                <table id="table" name="tabemp" class="am-table am-table-striped am-table-hover table-main">
+                                    <thead>
+					<tr>
+                        <th>
+							选择
+						</th>
+						<th>
+							ID
+						</th>
+                        <th>
+							工号
+						</th>
+                        <th>
+							姓名
+						</th>
+						<th>
+							职位
+						</th>
+                        <th>
+							权限
+						</th>
+
+					</tr>
+				</thead>
+
+				<tbody id="mainBody">
+
+					{% for item in posts %}
+                       <tr>
+                      <td><label><input name=te type="checkbox" value="">
+                           </label></td>
+                            <td>
+                                {{ item['a'] }}
+                            </td>
+                            <td>
+                                {{ item['b'] }}
+                            </td>
+                           <td>
+                                {{ item['c'] }}
+                            </td>
+                       <td>
+                                {{ item['d'] }}
+                            </td>
+                       <td>
+                                {{ item['e'] }}
+                            </td>
+
+
+                       </tr>
+                {% endfor %}
+				</tbody>
+{#                                    <tbody id="mainBody">#}
+{#                                        {% for post in posts %}#}
+{##}
+{#                                            <td><label><input name=te type="checkbox" value="">#}
+{#                                            </label></td>#}
+{#                                            <td>{{post.a}}<a href="javascript:;"  onclick="delRow(this)">删除</a></td>#}
+{#                                            <td>{{post.b}}</td>#}
+{#                                            <td>{{post.c}}</td>#}
+{#                                            <td>{{post.d}}</td>#}
+{#                                            <td>{{post.e}}</td>#}
+{#                                            <td>{{post.f}}</td>#}
+{#                                            <td>{{post.g}}</td>#}
+{#                                            <td>{{post.h}}</td>#}
+{#                                            <td>{{post.i}}</td>#}
+{#                                            <td>{{post.j}}</td>#}
+{#                                       {% endfor %}#}
+{#                                    </tbody>#}
+
+<button type="button" onclick="selectAll()" style="font-size: 10px">全选</button>
+<button type="button" onclick="unSelectAll()" style="font-size: 10px">全不选</button>
+<button type="button" onclick="converSelectAll()" style="font-size: 10px">反选</button>
+
+
+<script type="text/javascript">
+    var inputs =  document.getElementsByTagName("input");
+
+
+
+
+
+    function selectAll(){
+        for(var i = 0;i<inputs.length;i++){
+            inputs[i].checked = true;
+        }
+    }
+    function unSelectAll(){
+        for(var i = 0;i<inputs.length;i++){
+            inputs[i].checked = false;
+        }
+    }
+    function converSelectAll(){
+        for(var i = 0;i<inputs.length;i++){
+            if(inputs[i].checked){
+                inputs[i].checked = false;
+            }else{
+                inputs[i].checked = true;
+            }
+        }
+    }
+
+
+
+
+function dele() {
+    var checks = document.getElementsByName("te");
+    var tbBody = document.getElementById("mainBody");
+        for (var i=checks.length-1; i>=0; i--) {
+        if (checks[i].checked) {
+            {#var li = tbBody.getElementsByTagName("te")[i].childNodes[0].innerHTML;#}
+            var li=tbBody.rows [i].cells[1];
+            tbBody.value=li.innerHTML.trim();
+            var huo = tbBody.value
+
+            tbBody.deleteRow(i)
+        }
+        console.log(huo+typeof(huo))
+        $.get("/delete?a="+huo,function (data,s) {
+            console.log(data)
+        })
+    }
+}
+
+
+
+
+</script>
+                                </table>
+
+                                <hr>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tpl-alert"></div>
+            </div>
+        </div>
+
+
+
+<div class="am-u-sm-2 login-am-center">
+<p><button type="submit" onclick="dele()" class="am-btn am-btn-default" style="font-size: 13px">删除</button></p>
+</div>
+
+
+
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/amazeui.min.js"></script>
+    <script src="/static/assets/js/app.js"></script>
+</body>
+
+</html>
